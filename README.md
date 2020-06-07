@@ -1,4 +1,4 @@
-### honeycomb-demo
+## honeycomb-demo
 This is the repo for the post [Hands on Monitoring a Spring Boot Application with Honeycomb](https://paika.tech/blog/2020/06/06/hands-on-honeycomb-and-spring-boot.html)
 It's Spring Boot app, that exposes an endpoint for persisting Bees to a local H2 database with Spring Data Rest.
 Its instrumented with Honeycomb.
