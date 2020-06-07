@@ -1,0 +1,27 @@
+config:
+  target: "http://localhost:8080"
+  phases:
+    - duration: 60
+      arrivalRate: 1
+      rampTo: 10000
+      name: "Warm up the application"
+    - duration: 60
+      arrivalRate: 10000
+      name: "Peak load"
+    - duration: 60
+      arrivalRate: 10000
+      rampTo: 1
+      name: "Chill out the application"
+
+scenarios:
+  - name: "Create a bee, get your bee, then get all the bees!"
+    flow:
+      - post:
+          url: "/bees"
+          json:
+            name: "Buzzy"
+            catchphrase: "Bzzzzzz"
+      - get:
+          url: "/bees"
+
+
